@@ -2,7 +2,7 @@
   "name": "bcmarketplace/module-carousel-fusion",
   "description": "Magento 2 wrapper for Owl Carousel v2.3.4 jQuery widget with accessibility enhancements and modern browser API support.",
   "type": "magento2-module",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": [
     "proprietary"
   ],
