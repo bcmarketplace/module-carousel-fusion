@@ -1,0 +1,31 @@
+{
+  "name": "bcmarketplace/module-carousel-fusion",
+  "description": "Magento 2 wrapper for Owl Carousel v2.3.4 jQuery widget with accessibility enhancements and modern browser API support.",
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "license": [
+    "proprietary"
+  ],
+  "authors": [
+    {
+      "name": "Raphael Baako",
+      "email": "rbaako@baakoconsultingllc.com",
+      "homepage": "https://baakoconsultingllc.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "~8.2.0||~8.3.0",
+    "magento/framework": ">=103.0.0",
+    "bcmarketplace/module-base": "*"
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "BCMarketplace\\CarouselFusion\\": ""
+    }
+  }
+}
+
