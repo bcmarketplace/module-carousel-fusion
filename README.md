@@ -6,30 +6,101 @@ CarouselFusion adds responsive image carousels to your Magento storefront. It's 
 
 ## Installation
 
-1. Install via Composer:
-   ```bash
-   composer require bcmarketplace/module-carousel-fusion
-   ```
+### Prerequisites
 
-2. Enable the module:
-   ```bash
-   bin/magento module:enable BCMarketplace_CarouselFusion
-   ```
+- Magento 2.4.x (Community or Enterprise Edition)
+- PHP 8.2 or 8.3
+- Composer 2.x
 
-3. Run setup upgrade:
-   ```bash
-   bin/magento setup:upgrade
-   ```
+### Step 1: Configure Repository
 
-4. Deploy static content:
-   ```bash
-   bin/magento setup:static-content:deploy -f
-   ```
+Since this is a private package, you need to add the repository to your `composer.json`. You can do this using one of the following methods:
 
-5. Clear cache:
-   ```bash
-   bin/magento cache:flush
-   ```
+#### Option A: Using Composer Config (Recommended)
+
+```bash
+# Add the CarouselFusion repository
+composer config repositories.bcmarketplace-carousel-fusion vcs git@github.com:bcmarketplace/module-carousel-fusion.git
+
+# Add the Base module repository (required dependency)
+composer config repositories.bcmarketplace-base vcs git@github.com:bcmarketplace/module-base.git
+```
+
+#### Option B: Manual Configuration
+
+Add the following to your `composer.json` file:
+
+```json
+{
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:bcmarketplace/module-carousel-fusion.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:bcmarketplace/module-base.git"
+    }
+  ]
+}
+```
+
+### Step 2: Install the Module
+
+#### Install Stable Version
+
+```bash
+composer require bcmarketplace/module-carousel-fusion
+```
+
+This will automatically install the required `bcmarketplace/module-base` dependency.
+
+#### Install from Develop Branch (Latest Development Version)
+
+```bash
+composer require bcmarketplace/module-carousel-fusion:dev-develop
+```
+
+### Step 3: Enable the Module
+
+```bash
+bin/magento module:enable BCMarketplace_CarouselFusion
+```
+
+### Step 4: Run Setup Upgrade
+
+```bash
+bin/magento setup:upgrade
+```
+
+### Step 5: Deploy Static Content
+
+```bash
+bin/magento setup:static-content:deploy -f
+```
+
+### Step 6: Clear Cache
+
+```bash
+bin/magento cache:flush
+```
+
+### Complete Installation Command Sequence
+
+```bash
+# Configure repositories
+composer config repositories.bcmarketplace-carousel-fusion vcs git@github.com:bcmarketplace/module-carousel-fusion.git
+composer config repositories.bcmarketplace-base vcs git@github.com:bcmarketplace/module-base.git
+
+# Install module
+composer require bcmarketplace/module-carousel-fusion
+
+# Enable and setup
+bin/magento module:enable BCMarketplace_CarouselFusion
+bin/magento setup:upgrade
+bin/magento setup:static-content:deploy -f
+bin/magento cache:flush
+```
 
 ## How to Use
 
