@@ -26,6 +26,11 @@
     "psr-4": {
       "BCMarketplace\\CarouselFusion\\": ""
     }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-develop": "1.1.x-dev"
+    }
   }
 }
 
